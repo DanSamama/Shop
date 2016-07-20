@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.angularjs.org/1.5.7/angular.js"></script>
+    <script src="https://code.angularjs.org/1.5.7/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="./controller/shopController.js"></script>
+    <script src="directives.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="styleShop.css" rel="stylesheet" />
+
+
+
+</head>
+<body data-ng-app="shopApp">
+
+<div data-ng-controller="shopController">
+    <navigation-bar></navigation-bar>
+
+    <div ng-view></div>
+</div>
+
+</body>
+</html>

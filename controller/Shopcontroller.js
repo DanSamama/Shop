@@ -20,7 +20,7 @@
        
             $http({
                 method: 'GET',
-                url: 'https://api.myjson.com/bins/1cfgx'
+                url: 'https://api.myjson.com/bins/343zh'
             }).then(function successCallback(response) {
                 console.log(response);
                 $scope.danProducts = response.data;

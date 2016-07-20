@@ -13,14 +13,15 @@
 
         $scope.danProducts = [];
         $scope.chosenProduct = {};
+        $scope.cartItems = [];
         // angular.element(document).ready(function () {
-       
-        
-        
-       
+
+
+
+
             $http({
                 method: 'GET',
-                url: 'https://api.myjson.com/bins/343zh'
+                url: 'https://api.myjson.com/bins/1ivst'
             }).then(function successCallback(response) {
                 console.log(response);
                 $scope.danProducts = response.data;
@@ -34,6 +35,24 @@
                 // called asynchronously if an error occurs
                 // or server returns response with an error status.
             });
+
+
+        $scope.updateCart = function(id){
+            if ($scope.cartItems.length>0) {
+                for (var i = 0; i < $scope.cartItems.length; i++) {
+                    var currentItem = $scope.cartItems[i];
+                    if (currentItem.id === id) {
+                        currentItem.quantity++;
+                        console.log( $scope.cartItems);
+                        return;
+                    }
+                }
+            }
+            var temp = $scope.danProducts[id];
+            var item = Object.assign(temp,{quantity:1});
+            $scope.cartItems.push(item);
+            
+        };
         
 
 

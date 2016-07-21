@@ -11,10 +11,15 @@
                 templateUrl: 'productBox.html',
                 controller: 'shopController'
             })
+            .when('/cart', {
+                templateUrl: 'cart.html',
+                controller: 'shopController'
+            })
             .when('/:id', {
                 templateUrl: 'fullInfo.html',
                 controller: 'shopController'
             })
+                      
         .otherwise({redirectTo: '/'});
     });
 })();

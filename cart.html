@@ -1,10 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<div class="container-fluid">
 
-</body>
-</html>
+    <div class="col-xs-2"></div>
+    <div class="col-xs-8">
+
+        <span ng-repeat="prod in cartItems">
+
+        <img class="imageProduct" ng-src="{{prod.Image}}" alt="Bouteille de Ricard">
+        <p class="nameProduct"></p>
+        <p class="priceProduct">${{prod.Price}}</p>
+
+
+        </span>
+
+
+    </div>
+    <div class="col-xs-2"></div>
+
+
+</div>

@@ -8,15 +8,15 @@
 
     function shopController($scope, $http, $routeParams) {
 
-
         $scope.productClicked = false;
 
         $scope.danProducts = [];
         $scope.chosenProduct = {};
         $scope.cartItems = [];
         // angular.element(document).ready(function () {
-
-
+        if (localStorage.getItem("cart")){
+            $scope.cartItems= JSON.parse(localStorage.getItem("cart"));
+        }
 
 
             $http({
@@ -51,14 +51,19 @@
             var temp = $scope.danProducts[id];
             var item = Object.assign(temp,{quantity:1});
             $scope.cartItems.push(item);
+            localStorage.setItem("cart",JSON.stringify($scope.cartItems));
             
         };
-        
 
 
-      
-       
+
+
 
     }
 
 })();
+
+
+
+
+

@@ -2,9 +2,8 @@
 <div class="container-fluid listOfDrinks">
     <div class="productBase">
         <div ng-repeat="product in danProducts" class="product">
-            <!--href='#/product/'{{product.id}}-->
 
-            <img class=imageProduct ng-src="{{product.Image}}" alt="Bouteille de Ricard">
+            <img class="imageProduct" ng-src="{{product.Image}}" alt="Bouteille de Ricard">
             <p class="nameProduct">{{product.name}}</p>
             <p class="priceProduct">${{product.Price}}</p>
             <button class="button button1" ng-click="updateCart(product.id)">Buy</button>

@@ -43,6 +43,7 @@
                     var currentItem = $scope.cartItems[i];
                     if (currentItem.id === id) {
                         currentItem.quantity++;
+                        localStorage.setItem("cart",JSON.stringify($scope.cartItems));
                         console.log( $scope.cartItems);
                         return;
                     }
@@ -51,7 +52,6 @@
             var temp = $scope.danProducts[id];
             var item = Object.assign(temp,{quantity:1});
             $scope.cartItems.push(item);
-            
             localStorage.setItem("cart",JSON.stringify($scope.cartItems));
             
         };

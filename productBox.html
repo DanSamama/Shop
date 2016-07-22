@@ -5,7 +5,7 @@
 
             <img class="imageProduct" ng-src="{{product.Image}}" alt="Bouteille de Ricard">
             <p class="nameProduct">{{product.name}}</p>
-            <p class="priceProduct">${{product.Price}}</p>
+            <p class="priceProduct">{{product.Price | currency}}</p>
             <button class="button button1" ng-click="updateCart(product.id)">Buy</button>
             <button class="button button2"><a href="#/{{product.id}}">Info</a></button>
         </div>

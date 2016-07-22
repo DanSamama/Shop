@@ -3,15 +3,17 @@
     <div class="col-xs-2"></div>
     <div class="col-xs-8">
 
-        <span ng-repeat="prod in cartItems">
+        <span ng-repeat="prod in cartItems" class="eachItem">
 
         <img class="imageProduct" ng-src="{{prod.Image}}" alt="Bouteille de Ricard">
+            <div class="quantity-products">
+
         <p class="priceProduct">${{prod.Price}}</p>
             <p>{{prod.quantity}}</p>
             <button ng-click="addingItem(prod)">+</button>
             <button ng-click="removingItem(prod)">-</button>
 
-
+</div>
         </span>
 
 

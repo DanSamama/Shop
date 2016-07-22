@@ -48,3 +48,9 @@
      margin-right: 3%;
 
  }
+ .quantity-products{
+     display: inline-block;
+ }
+span.eachItem.ng-scope {
+    padding-right: 15%;
+}

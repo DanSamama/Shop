@@ -51,9 +51,26 @@
             var temp = $scope.danProducts[id];
             var item = Object.assign(temp,{quantity:1});
             $scope.cartItems.push(item);
+            
             localStorage.setItem("cart",JSON.stringify($scope.cartItems));
             
         };
+
+
+        $scope.addingItem =  function(prod){
+            prod.quantity++;
+            localStorage.removeItem("cart");
+            localStorage.setItem("cart",JSON.stringify($scope.cartItems));
+        };
+
+        $scope.removingItem =  function(prod){
+            if(prod.quantity>0) {
+                prod.quantity--;
+                localStorage.removeItem("cart");
+                localStorage.setItem("cart", JSON.stringify($scope.cartItems));
+            }
+        };
+        
 
 
 

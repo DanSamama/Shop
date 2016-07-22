@@ -13,6 +13,7 @@
         $scope.danProducts = [];
         $scope.chosenProduct = {};
         $scope.cartItems = [];
+        $scope.counter = 0;
         // angular.element(document).ready(function () {
         if (localStorage.getItem("cart")){
             $scope.cartItems= JSON.parse(localStorage.getItem("cart"));
@@ -70,6 +71,11 @@
                 localStorage.setItem("cart", JSON.stringify($scope.cartItems));
             }
         };
+        // $.scope.someCartQuantity = function(prod){
+        //     for(var i=0;i<cartItems.length;i++){
+        //         var som =
+        //     }
+        // }
         
 
 

@@ -10,8 +10,11 @@
 
         <p class="priceProduct">${{prod.Price}}</p>
             <p>{{prod.quantity}}</p>
+
+                <button ng-click="removingItem(prod)">-</button>
             <button ng-click="addingItem(prod)">+</button>
-            <button ng-click="removingItem(prod)">-</button>
+                <button ng-click="deleteItem($index)">Remove</button>
+
 
 </div>
         </span>

@@ -6,6 +6,7 @@
             <img class="imageProduct" ng-src="{{product.Image}}" alt="Bouteille de Ricard">
             <p class="nameProduct">{{product.name}}</p>
             <p class="priceProduct">{{product.Price | currency}}</p>
+            <span class="quantity-items" ng-repeat="item in cartItems" ng-if="item.id ==product.id">Qty : {{item.quantity}}</span>
             <button class="button button1" ng-click="updateCart(product.id)">Buy</button>
             <button class="button button2"><a href="#/{{product.id}}">Info</a></button>
         </div>

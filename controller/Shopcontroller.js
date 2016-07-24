@@ -39,6 +39,7 @@
 
 
         $scope.updateCart = function(id){
+            // $scope.counter++;
             if ($scope.cartItems.length>0) {
                 for (var i = 0; i < $scope.cartItems.length; i++) {
                     var currentItem = $scope.cartItems[i];
@@ -71,6 +72,12 @@
                 localStorage.setItem("cart", JSON.stringify($scope.cartItems));
             }
         };
+        $scope.deleteItem = function (index) {
+            $scope.cartItems.splice(index, 1);
+            localStorage.removeItem("cart");
+            localStorage.setItem("cart", JSON.stringify($scope.cartItems));
+        };
+
         // $.scope.someCartQuantity = function(prod){
         //     for(var i=0;i<cartItems.length;i++){
         //         var som =

@@ -8,15 +8,15 @@
     shopApp.config(function($routeProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: 'productBox.html',
+                templateUrl: './partials/productBox.html',
                 controller: 'shopController'
             })
             .when('/cart', {
-                templateUrl: 'cart.html',
+                templateUrl: './partials/cart.html',
                 controller: 'shopController'
             })
             .when('/:id', {
-                templateUrl: 'fullInfo.html',
+                templateUrl: './partials/fullInfo.html',
                 controller: 'shopController'
             })
                       

@@ -5,7 +5,7 @@ var shopApp = angular.module('shopApp');
 
 shopApp.directive("navigationBar",function(){
     return{
-        templateUrl:"topview.html"
+        templateUrl:"./partials/topview.html"
     };
 });
 
